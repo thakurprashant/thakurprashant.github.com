@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Security through obscurity &#8211; Prabhat Pokharel</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Security through obscurity - meaning that you assume that no one is going to figure out flaws in your system, it is just a matter of time that you could be targeted.">
+    <meta name="author" content="Prabhat Pokharel">
+    <meta name="keywords" content="blog, security">
+    <link rel="canonical" href="http://pokharelprabhat.com.np/blog/security/2015/12/14/Security-through-obscurity/">
+    <link rel="alternate" type="application/rss+xml" title="RSS Feed for Prabhat Pokharel" href="/feed.xml" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/pixyll.css?201601250451" type="text/css">
+
+    <!-- Fonts -->
+    <link href='//fonts.googleapis.com/css?family=Merriweather:900,900italic,300,300italic' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Lato:900,300' rel='stylesheet' type='text/css'>
+    
+      <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+    
+
+    <!-- Verifications -->
+    
+
+    <!-- Open Graph -->
+    <!-- From: https://github.com/mmistakes/hpstr-jekyll-theme/blob/master/_includes/head.html -->
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Security through obscurity">
+    <meta property="og:description" content="This is my blog">
+    <meta property="og:url" content="http://pokharelprabhat.com.np/blog/security/2015/12/14/Security-through-obscurity/">
+    <meta property="og:site_name" content="Prabhat Pokharel">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary" />
+    
+        <meta name="twitter:site" content="@prabhatpokharel" />
+    
+    <meta name="twitter:title" content="Security through obscurity" />
+    <meta name="twitter:description" content="Security through obscurity - meaning that you assume that no one is going to figure out flaws in your system, it is just a matter of time that you could be targeted." />
+    <meta name="twitter:url" content="http://pokharelprabhat.com.np/blog/security/2015/12/14/Security-through-obscurity/" />
+
+    <!-- Icons -->
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="/favicon-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="/favicon-160x160.png" sizes="160x160">
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+
+    
+</head>
+
+<body class="site animated fade-in-down">
+
+	
+
+  <div class="site-wrap">
+    <header class="site-header px2 px-responsive">
+  <div class="mt2 wrap">
+    <div class="measure">
+      <a href="http://pokharelprabhat.com.np" class="site-title">Prabhat Pokharel</a>
+      <nav class="site-nav">
+        <a href="/about/">About</a>
+<a href="/contact/">Contact</a>
+
+      </nav>
+      <div class="clearfix"></div>
+      
+        <div class="social-icons">
+  <div class="social-icons-right">
+    
+    
+    
+    <a class="fa fa-rss" href="/feed.xml"></a>
+    
+      <a class="fa fa-twitter" href="https://twitter.com/prabhatpokharel"></a>
+    
+    
+    
+      <a class="fa fa-envelope" href="mailto:pokharelprabhat@gmail.com"></a>
+    
+    
+      <a class="fa fa-linkedin" href="https://www.linkedin.com/in/prabhat-pokharel-48688716"></a>
+    
+    
+    
+  </div>
+  <div class="right">
+    
+    
+    
+  </div>
+</div>
+<div class="clearfix"></div>
+
+      
+    </div>
+  </div>
+</header>
+
+
+    <div class="post p2 p-responsive wrap" role="main">
+      <div class="measure">
+        
+
+
+<div class="post-header mb2">
+  <h1>Security through obscurity</h1>
+  <span class="post-meta">Dec 14, 2015</span><br>
+  
+  <span class="post-meta small">
+  
+    2 minute read
+  
+  </span>
+</div>
+
+<article class="post-content">
+  <p>Security through obscurity - meaning that you assume that no one is going to figure out flaws in your system, it is just a matter of time that you could be targeted.</p>
+
+<p>Keeping your door key under the welcome mat, or keeping your passwords under your desk.</p>
+
+<p>I’ve had the telnet port opened on some random port number, this should keep my server safe? This assumption can go wrong completely. One can easily identify the service using fingerprinting  techniques.</p>
+
+<p>So, what are we talking here? Anything that is hidden to be disclosed is the approach to implement security through obscurity. Suppose I am using secure shell for various administrative operations. What would be the fundamental thing to do so that the access is secured. Obviously, I can achieve 100% security by not using it at all, but that is not possible. So, on practical grounds I would use key or public key based authentication. Similarly I could have things like enforcing strong passphrase, disabling all users unless otherwise specified, disable remote connections etc. So, I could implement these and many other practices to strengthen the security involved in secure shell access. However, in contrast to that if I prefer not to carry all of those steps and just change the SSH port from 22 to say port 2345, thinking that I would be able to hide the service, and thus protect it, I would be trying to implement security through obscurity. Thus, be an idiot.  Because, it wouldn’t take more then few minutes to identify the obscured port specially when the service is exposed on a public network.</p>
+
+<p>The standard security approach thus suggests one to follow the standards and well accepted practices to enhance security and not to hide the loop holes that you might have. However, if we think in a different most of our security practices rely on obscurity. Use of passwords, pass-phrases or high bit encryption keys are all ways of obscuring security in a different way. All of our adapted security practices implement security through obscurity in one way or the other. The only important part being the ability to determine the exact breakeven point. Failing to identify the exact point would either increase the security risk or decrease the usability.</p>
+
+</article>
+
+
+  <div class="share-page">
+  Share this post!
+
+  <div class="share-links">
+    
+      <a class = "fa fa-facebook" href="https://facebook.com/sharer.php?u=http://pokharelprabhat.com.np/blog/security/2015/12/14/Security-through-obscurity/" rel="nofollow" target="_blank" title="Share on Facebook"></a>
+    
+
+    
+      <a class="fa fa-twitter" href="https://twitter.com/intent/tweet?text=Security through obscurity&url=http://pokharelprabhat.com.np/blog/security/2015/12/14/Security-through-obscurity/" rel="nofollow" target="_blank" title="Share on Twitter"></a>
+    
+
+    
+
+    
+      <a class="fa fa-linkedin" href="http://www.linkedin.com/shareArticle?url=http://pokharelprabhat.com.np/blog/security/2015/12/14/Security-through-obscurity/&title=Security through obscurity" rel="nofollow" target="_blank" title="Share on LinkedIn"></a>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+
+  </div>
+</div>
+
+
+
+
+  <div class="py2 post-footer">
+  
+  <p>
+    <a href="http://pokharelprabhat.com.np">Prabhat Pokharel</a>.
+    Follower of art, movies, music, literature.
+  </p>
+  <p>
+    Follow him on <a href="https://twitter.com/prabhatpokharel">Twitter</a>.
+  </p>
+</div>
+
+
+
+
+
+
+
+
+  <h3 class="related-post-title">Related Posts</h3>
+  
+    <div class="post ml2">
+      <a href="/blog/security/2016/01/23/Phishing-email/" class="post-link">
+        <h4 class="post-title">Phishing email</h4>
+        <p class="post-summary">Phishing emails are composed in such a way that the information in the email attracts a recipient to click on a malicious link or download a malicious content.</p>
+      </a>
+    </div>
+  
+    <div class="post ml2">
+      <a href="/blog/security/2015/12/25/Preventing-Facebook-account-hack/" class="post-link">
+        <h4 class="post-title">Preventing Facebook account hack</h4>
+        <p class="post-summary">Facebook account hacking is on the rise, being the most most popular social networking site, this is a threat to millions of users across the globe who have a lot of personal and private information stored in their accounts.</p>
+      </a>
+    </div>
+  
+    <div class="post ml2">
+      <a href="/2015/12/22/Geo-political-aspect-of-information-security/" class="post-link">
+        <h4 class="post-title">Geo political aspect of information security</h4>
+        <p class="post-summary">Any kind of IT operation could have some kind of potential threat.</p>
+      </a>
+    </div>
+  
+    <div class="post ml2">
+      <a href="/blog/security/2015/12/16/Financial-information-security-overview/" class="post-link">
+        <h4 class="post-title">Financial information security overview</h4>
+        <p class="post-summary">We have been hearing of increase in banking fraud cases in recent years. With the increase in use of information technology and banking cards in financial sector, the nature of fraud has been shifting from traditional robbing and breaking cases to more sophisticated ones.</p>
+      </a>
+    </div>
+  
+
+
+      </div>
+    </div>
+  </div>
+
+  <footer class="center">
+  <div class="measure">
+    <small>
+      <a href="http://pokharelprabhat.com.np">Prabhat Pokharel</a> (<a href="https://twitter.com/prabhatpokharel">@prabhatpokharel</a>).<br>
+    </small>
+  </div>
+</footer>
+
+</body>
+</html>
