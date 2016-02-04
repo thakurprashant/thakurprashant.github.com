@@ -1,189 +1,36 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <title>Prashant Kumar Thakur</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="This is my blog">
-    <meta name="author" content="Prashant kr. Thakur">
-    
-    <link rel="canonical" href="http://thakurprashant.com.np/">
-    <link rel="alternate" type="application/rss+xml" title="RSS Feed for Prashant kr. Thakur" href="/feed.xml" />
+---
+layout: default
+---
 
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/pixyll.css?201601250451" type="text/css">
+<div class="posts">
+  {% for post in paginator.posts %}
+  <div class="post">
+    <h1 class="post-title">
+      <a href="{{ post.url }}">
+        {{ post.title }}
+      </a>
+    </h1>
 
-    <!-- Fonts -->
-    <link href='//fonts.googleapis.com/css?family=Merriweather:900,900italic,300,300italic' rel='stylesheet' type='text/css'>
-    <link href='//fonts.googleapis.com/css?family=Lato:900,300' rel='stylesheet' type='text/css'>
-    
-      <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
-    
+    <span class="post-date">{{ post.date | date_to_string }}</span>
 
-    <!-- Verifications -->
-    
-
-    <!-- Open Graph -->
-    <!-- From: https://github.com/mmistakes/hpstr-jekyll-theme/blob/master/_includes/head.html -->
-    <meta property="og:locale" content="en_US">
-    <meta property="og:type" content="article">
-    <meta property="og:title" content="Prashant kr. Thakur">
-    <meta property="og:description" content="This is my blog">
-    <meta property="og:url" content="http://thakurprashant.com.np/">
-    <meta property="og:site_name" content="Prashant kr. Thakur">
-
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary" />
-    
-        <meta name="twitter:site" content="@pkt" />
-    
-    <meta name="twitter:title" content="Prashant kr. Thakur" />
-    <meta name="twitter:description" content="This is my blog" />
-    <meta name="twitter:url" content="http://thakurprashant.com.np/" />
-
-    <!-- Icons -->
-    <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
-    <link rel="icon" type="image/png" href="/favicon-192x192.png" sizes="192x192">
-    <link rel="icon" type="image/png" href="/favicon-160x160.png" sizes="160x160">
-    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
-    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
-    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
-
-    
-</head>
-
-<body class="site animated fade-in-down">
-
-	
-
-  <div class="site-wrap">
-    <header class="site-header px2 px-responsive">
-  <div class="mt2 wrap">
-    <div class="measure">
-      <a href="http://thakurprashant.com.np" class="site-title">Prashant kr. Thakur</a>
-      <nav class="site-nav">
-        <a href="/about/">About</a>
-<a href="/contact/">Contact</a>
-
-      </nav>
-      <div class="clearfix"></div>
-      
-        <div class="social-icons">
-  <div class="social-icons-right">
-    
-    
-    
-    <a class="fa fa-rss" href="/feed.xml"></a>
-    
-      <a class="fa fa-twitter" href="https://twitter.com/pkt"></a>
-    
-    
-    
-      <a class="fa fa-envelope" href="mailto:thakurprashant@gmail.com"></a>
-    
-    
-      <a class="fa fa-linkedin" href="https://www.linkedin.com/in/prashant-thakur-48688716"></a>
-    
-    
-    
+    {{ post.content }}
   </div>
-  <div class="right">
-    
-    
-    
-  </div>
-</div>
-<div class="clearfix"></div>
-
-      
-    </div>
-  </div>
-</header>
-
-
-    <div class="post p2 p-responsive wrap" role="main">
-      <div class="measure">
-        <div class="home">
-
-  <div class="posts">
-    
-      <div class="post py3">
-        <p class="post-meta">Jan 23, 2016</p>
-        <a href="/blog/security/2016/01/23/Phishing-email/" class="post-link"><h3 class="h1 post-title">Phishing email</h3></a>
-        <p class="post-summary">
-          
-            Phishing emails are composed in such a way that the information in the email attracts a recipient to click on a malicious link or download a malicious content.
-          
-        </p>
-      </div>
-    
-      <div class="post py3">
-        <p class="post-meta">Dec 25, 2015</p>
-        <a href="/blog/security/2015/12/25/Preventing-Facebook-account-hack/" class="post-link"><h3 class="h1 post-title">Preventing Facebook account hack</h3></a>
-        <p class="post-summary">
-          
-            Facebook account hacking is on the rise, being the most most popular social networking site, this is a threat to millions of users across the globe who have a lot of personal and private information stored in their accounts.
-          
-        </p>
-      </div>
-    
-      <div class="post py3">
-        <p class="post-meta">Dec 22, 2015</p>
-        <a href="/2015/12/22/Geo-political-aspect-of-information-security/" class="post-link"><h3 class="h1 post-title">Geo political aspect of information security</h3></a>
-        <p class="post-summary">
-          
-            Any kind of IT operation could have some kind of potential threat.
-          
-        </p>
-      </div>
-    
-      <div class="post py3">
-        <p class="post-meta">Dec 16, 2015</p>
-        <a href="/blog/security/2015/12/16/Financial-information-security-overview/" class="post-link"><h3 class="h1 post-title">Financial information security overview</h3></a>
-        <p class="post-summary">
-          
-            We have been hearing of increase in banking fraud cases in recent years. With the increase in use of information technology and banking cards in financial sector, the nature of fraud has been shifting from traditional robbing and breaking cases to more sophisticated ones.
-          
-        </p>
-      </div>
-    
-  </div>
-
-  <div class="pagination clearfix mb1 mt4">
-  <div class="left">
-    
-      <span class="pagination-item disabled">Newer</span>
-    
-  </div>
-  <div class="right">
-    
-      <a class="pagination-item" href="/page2/">Older</a>
-    
-  </div>
+  {% endfor %}
 </div>
 
+<div class="pagination">
+  {% if paginator.next_page %}
+    <a class="pagination-item older" href="/page{{paginator.next_page}}">Older</a>
+  {% else %}
+    <span class="pagination-item older">Older</span>
+  {% endif %}
+  {% if paginator.previous_page %}
+    {% if paginator.page == 2 %}
+      <a class="pagination-item newer" href="/">Newer</a>
+    {% else %}
+      <a class="pagination-item newer" href="/page{{paginator.previous_page}}">Newer</a>
+    {% endif %}
+  {% else %}
+    <span class="pagination-item newer">Newer</span>
+  {% endif %}
 </div>
-
-      </div>
-    </div>
-  </div>
-
-  <footer class="center">
-  <div class="measure">
-    <small>
-      <a href="http://prashantthakur.com.np">Prashant kr. Thakur</a> (<a href="https://twitter.com/pkt">@pkt</a>).<br>
-    </small>
-  </div>
-</footer>
-
-</body>
-</html>
